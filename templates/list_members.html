@@ -10,20 +10,14 @@
     </tr>
     <tbody>
     {% for member in members %}
-    <tr class="table_row">
-        <form action="/list_members" method="POST">
-            {% set val=loop.index %}
-            
-                <td class="table_value">{{val}}</td>
-                {% for i in member %}
-                <td class="table_value">
-                <button class="table_value" type="submit" name="members" value={{loop.index}} class="row_button">
-                    {{i}}
-                </button>
-            </td>
-                
-                {% endfor %}
-           
+    {% set member_index = loop.index %}
+    <tr class="table_row" style="cursor: pointer;" onclick="document.getElementById('form-{{ member_index }}').submit();">
+        <td class="table_value">{{ member_index }}</td>
+        {% for i in member %}
+        <td class="table_value">{{ i }}</td>
+        {% endfor %}
+        <form id="form-{{ member_index }}" action="/list_members" method="POST" style="display:none">
+            <input type="hidden" name="members" value="{{ member_index }}">
         </form>
     </tr>
     {% endfor %}
