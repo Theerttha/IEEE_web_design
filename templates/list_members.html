@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+{% block content %}
+<table class="table">
+    <tr class="table_head">
+      <th>SL</th>
+      <th>Name</th>
+      <th>Position</th>
+      <th>Year</th>
+      <th>Department</th>
+    </tr>
+    <tbody>
+    {% for member in members %}
+    <tr class="table_row">
+        <form action="/list_members" method="POST">
+            {% set val=loop.index %}
+            
+                <td class="table_value">{{val}}</td>
+                {% for i in member %}
+                <td class="table_value">
+                <button class="table_value" type="submit" name="members" value={{loop.index}} class="row_button">
+                    {{i}}
+                </button>
+            </td>
+                
+                {% endfor %}
+           
+        </form>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
