@@ -66,7 +66,6 @@ body {
     top: 0px;
     left: 0;
     right:0;
-    width: 100%;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     padding: 10px 0;
@@ -174,6 +173,7 @@ p {
     .footer,.logos{
         margin-left: 0px;
         margin-right: 0px;
+        width: max-content;
     }
     
 }
@@ -184,13 +184,15 @@ p {
     .Navbar {
         padding: 10px 0;
         margin-left: 0px;
-        margin-right: 0px;;
+        margin-right: 0px;
+        width: max-content;
     }
     .footer,.Logos{
         margin-left: 0px;
         margin-right: 0px;
+        width: max-content;
     }
-    
+
     .Navbar form {
         flex-direction: column;
         gap: 5px;
@@ -776,3 +778,164 @@ p {
     }
 }
 /* comment */
+
+.refer_img{
+    width:clamp(30px,50px,70px);
+    height:clamp(30px,50px,70px);
+}
+.sites{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* EVENTS */
+/* Event Page Styles */
+.event_content {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    padding: 25px;
+    max-width: 900px;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.event_content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.title_event_content {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #a1c4fd;
+}
+
+.Image_event_content {
+    text-align: center;
+    margin-bottom: 25px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.Image_event_content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.5s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.Image_event_content img:hover {
+    transform: scale(1.02);
+}
+
+.description_event_content {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+    background-color: rgba(161, 196, 253, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #a1c4fd;
+}
+
+/* Media Queries for Event Page */
+@media screen and (max-width: 992px) {
+    .event_content {
+        max-width: 90%;
+        padding: 20px;
+    }
+    
+    .title_event_content {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .event_content {
+        margin: 20px auto;
+        padding: 15px;
+    }
+    
+    .title_event_content {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .description_event_content {
+        font-size: 1rem;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .event_content {
+        padding: 12px;
+    }
+    
+    .title_event_content {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+    
+    .Image_event_content {
+        margin-bottom: 15px;
+    }
+    
+    .description_event_content {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Events List Page Styles */
+.years {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.year {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.year:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.year > button {
+    width: 100%;
+    text-align: left;
+    padding: 15px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    background-color: #a1c4fd;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.year > button:hover {
+    background-color: #90b8f8;
+}

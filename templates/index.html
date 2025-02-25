@@ -36,7 +36,7 @@
     <div class="body">
         {% block content %}
         <div class="notifications">
-            <h2>NOTIFICATIONS</h2>
+            <h2>UPCOMING EVENTS</h2>
             {% for item in notifications %}
             <div class="item_content">
                 {{ loop.index }}
@@ -56,9 +56,10 @@
         </div>
 
         <div class="sites">
-            <div class="site_name"><a href="https://www.ieee.org/" target="_blank">IEEE</a></div>
-            <div class="site_name"><a href="https://www.ieee.org/" target="_blank">IEEE</a></div>
-            <div class="site_name"><a href="https://www.ieee.org/" target="_blank">IEEE</a></div>
+            <div class="site_name"><a href="https://ieee-pes.org/" target="_blank">IEEE-PES</a></div>
+            <div><a href="https://www.instagram.com/ieeepes_gect/" target="_blank"><img src="static/images/instagram.webp" class="refer_img" ></a></div>
+            <div><a href="https://www.linkedin.com/company/ieeepes/" target="_blank"><img src="static/images/linked.png" class="refer_img" ></a></div>
+            <div><a href="https://www.facebook.com/ieeePES/" target="_blank"><img src="static/images/facebook.jpg" class="refer_img" ></a></div>
         </div>
         {% endblock %}
     </div>

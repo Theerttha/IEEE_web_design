@@ -4,7 +4,6 @@ from flask_session import Session
 
 app = Flask(__name__)
 app.config['SECRET KEY']="IEEE"
-
 app.config['SESSION_TYPE'] = 'filesystem'
 sess = Session()
 sess.init_app(app)
@@ -54,7 +53,7 @@ def list_team():
         
 @app.route('/events_list', methods=['POST', 'GET'])      
 def events_list():
-    d={2025:["Event 1","Event 2"],2024:["Event 1"],2023:[], 2022:[]}
+    d={2025:[],2024:["ELECTRIFY","CIRCUITEX 2.0"],2023:[], 2022:[]}
     if request.method=="GET":
         if 'year' not in session:
             session['year']=[]
@@ -67,7 +66,9 @@ def events_list():
         events_list=request.form.get('events_list')
         if events_list is not None:
             events_list=int(events_list)
+            print(events_list,session['year'])
             year=session['year']
+            session.pop('year')
             if events_list not in year:
                 year.append((events_list))
             else:
