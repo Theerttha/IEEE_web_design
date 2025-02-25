@@ -754,12 +754,11 @@ p {
         width: 100%;
     }
     
-    
     .IEEE_about, .PES_about {
         padding: 15px;
     }
-    
     .about_ieee_title, .about_pes_title {
         font-size: 20px;
     }
 }
+/* comment */
