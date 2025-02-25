@@ -1,58 +1,70 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            IEEE SB GECT
-        </title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IEEE SB GECT</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    <script defer src="{{url_for('static', filename='js/script.js')}}"></script>
+</head>
+<body class="main_body">
+
+    <div class="Logos">
+        <div class="logo1"><img src="static/images/gect.webp" alt="IEEE SB GECT"></div>
+        <div class="logo2"><img src="static/images/pes.png" alt="IEEE SB GECT"></div>
+        <div class="logo3"><img src="static/images/ieee.png" alt="IEEE SB GECT"></div>
+    </div>
+
+    <nav class="Navbar">
+        <div class="menu-icon" id="menu-toggle">&#9776;</div>
+        <ul class="nav-links" id="nav-links">
+            <form action="/" method="POST" class="logos" name="nav">
+
+                <button type="submit" name="nav" value={{1}} class="Navbar_content">Home</button>
+       
         
-        {% block head %}
-        {% endblock %}
-    </head>
-
-    <body class="main_body" id="body">
-            <div class="Logos">
-                <div class="logo1">
-                    <img src="static/images/gect.webp" alt="IEEE SB GECT">
-                </div>
-                <div class="logo2">
-                    <img src="static/images/pes.png" alt="IEEE SB GECT">
-
-                </div>
-
-                <div class="logo3">
-                    <img src="static/images/ieee.png" alt="IEEE SB GECT">
-
-                </div>
-            </div>
-            <div class="Navbar">
-            <form action="/" method="POST" name="nav">
-                
-                    <button type="submit" name="nav" value={{1}} class="Navbar_content">Events</button>
-           
-            
-                    <button type="submit" name="nav" value={{2}} class="Navbar_content">Team</button>
-        
-                    <button type="submit" name="nav" value={{3}} class="Navbar_content">Gallery</button>
-            
-                    <button type="submit" name="nav" value={{4}} class="Navbar_content">About us</button>
-   
+                <button type="submit" name="nav" value={{2}} class="Navbar_content">Team</button>
     
-                
-            </form>
-            </div>
-            
+                <button type="submit" name="nav" value={{3}} class="Navbar_content">Events</button>
+        
+                <button type="submit" name="nav" value={{4}} class="Navbar_content">About us</button>
+        </form>
+        </ul>
+    </div>
+    </nav>
 
-        <div class="body">
-            {% block content %}
-                <div class="notifications">
-                    NOTIFICATIONS
+    <div class="body">
+        {% block content %}
+        <div class="notifications">
+            <h2>NOTIFICATIONS</h2>
+            {% for item in notifications %}
+            <div class="item_content">
+                {{ loop.index }}
+                {% for i in item %}
+                
+                <div class="notification_content">
+                    <h class="notification_text">
+                        {{i}}
+                    </h>
                 </div>
-            {% endblock %}
+                {% endfor %}
+                <div class="img_notification">
+                    <img src="{{url_for('static', filename='images/'+img_notification)}}" alt="Notification image">
+                </div>
+            </div>
+            {% endfor %}
         </div>
 
+        <div class="sites">
+            <div class="site_name"><a href="https://www.ieee.org/" target="_blank">IEEE</a></div>
+            <div class="site_name"><a href="https://www.ieee.org/" target="_blank">IEEE</a></div>
+            <div class="site_name"><a href="https://www.ieee.org/" target="_blank">IEEE</a></div>
+        </div>
+        {% endblock %}
+    </div>
 
-    </body>
+    <footer class="footer">
+        <p>&copy; 2025 IEEE SB GECT. All Rights Reserved.</p>
+    </footer>
+</body>
 </html>

@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+
+{% block content %}
+<form action="/events_list" method="POST" class="years" name="events_list">
+  {% for i in range(2025,2021,-1) %}
+  <div class="year">
+    <button name="events_list" type="submit" value="{{i}}">
+      {{i}}
+    </button>
+</form>
+    {% if i in year %}
+    <form action="/events_list" method="POST" class="event_data" name="event_data">
+      {% for j in data[i] %}
+
+      <div class="event_name">
+        <button class="event_name_button" name="event_data" type="submit" value="{{i}},{{loop.index}}">
+          {{j}}
+        </button>
+      </div>
+    {%endfor %}
+    </form>
+
+    {% endif %}
+  </div>
+{% endfor %}
+
+
+
+{% endblock %}
