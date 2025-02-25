@@ -7,6 +7,7 @@ app.config['SECRET KEY']="IEEE"
 
 app.config['SESSION_TYPE'] = 'filesystem'
 sess = Session()
+sess.init_app(app)
 def request_func(nav):
     
     if(nav=="1"):
@@ -91,6 +92,6 @@ def about():
         nav=request.form.get('nav')
         return request_func(nav)
 if __name__ == "__main__":
-    sess.init_app(app)
+    
     app.run(debug=True)
 
