@@ -92,6 +92,6 @@ def about():
         nav=request.form.get('nav')
         return request_func(nav)
 if __name__ == "__main__":
-    
+    print("main")
     app.run(debug=True)
 
