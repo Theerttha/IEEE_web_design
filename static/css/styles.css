@@ -158,7 +158,10 @@ p {
 /* For tablets */
 @media (max-width: 768px) {
 
-    
+    .Navbar,.Logos,.footer{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
     .Navbar form {
         padding: 5px 15px;
         gap: 8px;
@@ -168,6 +171,11 @@ p {
         font-size: 14px;
         padding: 8px 12px;
     }
+    .footer,.logos{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
 }
 
 /* For mobile phones */
@@ -175,6 +183,12 @@ p {
     
     .Navbar {
         padding: 10px 0;
+        margin-left: 0px;
+        margin-right: 0px;;
+    }
+    .footer,.Logos{
+        margin-left: 0px;
+        margin-right: 0px;
     }
     
     .Navbar form {
