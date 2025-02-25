@@ -1,14 +1,11 @@
 from flask import Flask, render_template, url_for, request, redirect,session
-
 from flask_session import Session
-
 app = Flask(__name__)
 app.config['SECRET KEY']="IEEE"
 app.config['SESSION_TYPE'] = 'filesystem'
 sess = Session()
 sess.init_app(app)
 def request_func(nav):
-    
     if(nav=="1"):
         return redirect(url_for('index'))
     elif nav=="2":
@@ -66,7 +63,6 @@ def events_list():
         events_list=request.form.get('events_list')
         if events_list is not None:
             events_list=int(events_list)
-            print(events_list,session['year'])
             year=session['year']
             session.pop('year')
             if events_list not in year:
@@ -94,5 +90,6 @@ def about():
         return request_func(nav)
 if __name__ == "__main__":
     print("main")
+    print("func")
     app.run(debug=True)
 
