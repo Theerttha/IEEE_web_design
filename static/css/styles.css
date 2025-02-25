@@ -939,3 +939,209 @@ p {
 .year > button:hover {
     background-color: #90b8f8;
 }
+
+/* Media Queries  FOR MAIN */
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-align: right;
+}
+
+/* Base Media Queries - Fixed Version */
+
+/* Medium Devices (Tablets) */
+@media screen and (max-width: 992px) {
+    .body {
+        max-width: 90%;
+    }
+    
+    .Navbar form {
+        padding: 5px 15px;
+        gap: 10px;
+    }
+    
+    .Navbar_content {
+        font-size: 15px;
+        padding: 8px 15px;
+    }
+    
+    .logo1 img {
+        height: 100px;
+    }
+    
+    .logo2 img {
+        height: 70px;
+    }
+    
+    .logo3 img {
+        height: 50px;
+    }
+}
+
+/* Small Devices (Landscape Phones) */
+@media screen and (max-width: 768px) {
+    .body {
+        padding: 0 15px;
+    }
+    
+    /* Mobile menu toggle */
+    .menu-icon {
+        display: block;
+        width: 100%;
+        text-align: right;
+    }
+    
+    .nav-links {
+        display: none;
+        width: 100%;
+    }
+    
+    .nav-links.active {
+        display: block;
+    }
+    
+    .Navbar {
+        width: 100%;
+    }
+    
+    .Navbar form {
+        flex-direction: column;
+        width: 100%;
+        padding: 5px 15px;
+        gap: 5px;
+    }
+    
+    .Navbar_content {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        padding: 10px 5px;
+    }
+    
+    .logo1 img {
+        height: 80px;
+    }
+    
+    .logo2 img {
+        height: 60px;
+    }
+    
+    .logo3 img {
+        height: 40px;
+    }
+    
+    .notifications {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.7rem;
+    }
+}
+
+/* Extra Small Devices (Portrait Phones) */
+@media screen and (max-width: 576px) {
+    .Logos {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 10px;
+        width: 100%;
+    }
+    
+    .logo1 img {
+        height: 70px;
+    }
+    
+    .logo2 img {
+        height: 50px;
+    }
+    
+    .logo3 img {
+        height: 35px;
+    }
+    
+    .Navbar {
+        width: 100%;
+    }
+    
+    .notifications {
+        padding: 15px;
+    }
+    
+    .footer {
+        width: 100%;
+        padding: 15px 0;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Very Small Devices */
+@media screen and (max-width: 375px) {
+    .Logos {
+        gap: 15px;
+        padding: 8px;
+    }
+    
+    .logo1 img {
+        height: 60px;
+    }
+    
+    .logo2 img {
+        height: 45px;
+    }
+    
+    .logo3 img {
+        height: 30px;
+    }
+    
+    .Navbar_content {
+        font-size: 13px;
+        padding: 8px 0;
+    }
+    
+    .notifications {
+        padding: 12px;
+    }
+}
+
+/* Additional fixes for alignment and width issues */
+@media screen and (max-width: 768px) {
+    body, .main_body {
+        min-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .footer, .Navbar, .Logos {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .body {
+        margin: 20px auto;
+        max-width: 95%;
+    }
+    
+    .footer p {
+        width: 100%;
+        text-align: center;
+    }
+}

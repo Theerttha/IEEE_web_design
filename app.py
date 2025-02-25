@@ -46,7 +46,7 @@ def list_team():
         if(table is not None):
             ind=int(table)
             member_data=[["Irin Maria","Chairperson","3rd Year","ECE","Field of interest","linkedin link","img_link.webp"],["K Srihari","Secretary","2nd Year","EEE","Field of interest","linkedin link","img_link.webp"]]
-            return render_template('members.html',member=member_data[ind-1],img=member_data[ind-1][-1])
+            return render_template('members.html',member=member_data[ind-1][:-1],img=member_data[ind-1][-1])
         
 @app.route('/events_list', methods=['POST', 'GET'])      
 def events_list():
