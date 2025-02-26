@@ -6,7 +6,7 @@ Hosted Project Link
 Technologies Used
 
 Python,JavaScript,Html,Css
-pYTHON: Flask,flask_session
+Python: Flask,flask_session
 Jinja2
 
 Installation
