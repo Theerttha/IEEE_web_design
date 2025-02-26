@@ -18,7 +18,7 @@ def request_func(nav):
 @app.route('/', methods=['POST', 'GET'])
 def index():
     if request.method == 'GET':
-        notifications=[["Notification 1,content"],["Notification 2,content"],["Notification 3,content"]]
+        notifications=[["Notification 1","content"],["Notification 2","content"],["Notification 3","content"]]
         img_notification=["img_notification.jpg","img_notification.jpg","img_notification.jpg"]
         return render_template('index.html',notifications=notifications[:-1],img_notification=img_notification[-1])
     if request.method == 'POST':
